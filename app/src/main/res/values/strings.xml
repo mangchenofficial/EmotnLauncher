@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Emotn Launcher</string>
+    <string name="wallpaper_settings">壁纸设置</string>
+    <string name="app_management">应用管理</string>
+    <string name="usb_scan_wallpaper">是否扫描U盘中的壁纸？</string>
+    <string name="device_disconnected">设备已断开</string>
+    <string name="file_not_recognized">文件无法识别</string>
+    <string name="insufficient_storage">清理空间后再导入</string>
+    <string name="set_as_wallpaper">设为壁纸</string>
+    <string name="preview">预览</string>
+    <string name="delete">删除</string>
+    <string name="rename">重命名</string>
+    <string name="category">分类</string>
+    <string name="auto">自动</string>
+    <string name="center">居中</string>
+    <string name="stretch">拉伸</string>
+    <string name="tile">平铺</string>
+    <string name="video">视频</string>
+    <string name="image">图片</string>
+    <string name="gif">GIF</string>
+    <string name="loop_play">循环播放</string>
+    <string name="single_play">单次播放</string>
+    <string name="mute">静音</string>
+    <string name="unmute">取消静音</string>
+    <string name="brightness">亮度</string>
+    <string name="transparency">透明度</string>
+    <string name="refresh">刷新</string>
+    <string name="hide">隐藏</string>
+    <string name="sort">排序</string>
+    <string name="add_to_favorites">添加到常用</string>
+    <string name="remove_from_favorites">从常用移除</string>
+    <string name="uninstall">卸载</string>
+    <string name="move">移动</string>
+    <string name="found">找到</string>
+    <string name="wallpapers">个壁纸</string>
+    <string name="no_wallpapers_found">未找到壁纸</string>
+</resources>

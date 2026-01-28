@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20000000"
+    tools:context=".activity.UsbImportActivity">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:paddingHorizontal="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#30000000">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="返回"
+            android:onClick="onBackClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="从U盘导入壁纸"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <ImageView
+            android:id="@+id/btn_refresh"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="刷新"
+            android:layout_marginStart="auto"
+            android:onClick="onRefreshClick" />
+
+    </LinearLayout>
+
+    <!-- 状态文本 -->
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="请选择USB设备"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:gravity="center" />
+
+    <!-- USB设备列表 -->
+    <ListView
+        android:id="@+id/usb_device_list"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/status_text"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="#30FFFFFF"
+        android:divider="#50FFFFFF"
+        android:dividerHeight="2dp" />
+
+    <!-- 壁纸文件列表 -->
+    <ListView
+        android:id="@+id/wallpaper_file_list"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/usb_device_list"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="#30FFFFFF"
+        android:divider="#50FFFFFF"
+        android:dividerHeight="2dp" />
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".activity.MainActivity">
+
+    <!-- 常用应用栏 -->
+    <HorizontalScrollView
+        android:id="@+id/favorites_bar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <!-- 常用应用图标将动态添加 -->
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- 应用图标网格 -->
+    <GridLayout
+        android:id="@+id/app_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/favorites_bar"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingHorizontal="20dp"
+        android:columnCount="6"
+        android:rowCount="4">
+
+        <!-- 应用图标将动态添加 -->
+
+    </GridLayout>
+
+    <!-- 底部菜单栏 -->
+    <LinearLayout
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:paddingHorizontal="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#20000000">
+
+        <ImageView
+            android:id="@+id/btn_wallpaper"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/wallpaper_settings" />
+
+        <ImageView
+            android:id="@+id/btn_app_management"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_management" />
+
+        <ImageView
+            android:id="@+id/btn_refresh"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/refresh" />
+
+    </LinearLayout>
+
+</RelativeLayout>

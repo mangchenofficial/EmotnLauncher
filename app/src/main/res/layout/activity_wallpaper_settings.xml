@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20000000"
+    tools:context=".activity.WallpaperSettingsActivity">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:paddingHorizontal="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#30000000">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="返回"
+            android:onClick="onBackClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/wallpaper_settings"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:fontFamily="sans-serif-medium" />
+
+    </LinearLayout>
+
+    <!-- 壁纸列表 -->
+    <ListView
+        android:id="@+id/wallpaper_list"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/header"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="#30FFFFFF"
+        android:divider="#50FFFFFF"
+        android:dividerHeight="2dp" />
+
+    <!-- 设置选项 -->
+    <LinearLayout
+        android:id="@+id/settings_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/wallpaper_list"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:paddingHorizontal="40dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- 透明度调节 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transparency"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/transparency_value"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:gravity="right" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/transparency_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:max="100"
+                android:progress="100"
+                android:thumbTint="#FFFFFF"
+                android:progressTint="#FFFFFF" />
+
+        </LinearLayout>
+
+        <!-- 亮度调节 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brightness"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/brightness_value"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:gravity="right" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/brightness_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:max="100"
+                android:progress="100"
+                android:thumbTint="#FFFFFF"
+                android:progressTint="#FFFFFF" />
+
+        </LinearLayout>
+
+        <!-- 静音开关 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mute"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:id="@+id/mute_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:thumbTint="#FFFFFF"
+                android:trackTint="#50FFFFFF" />
+
+        </LinearLayout>
+
+        <!-- 循环播放开关 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loop_play"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:id="@+id/loop_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:thumbTint="#FFFFFF"
+                android:trackTint="#50FFFFFF" />
+
+        </LinearLayout>
+
+        <!-- 从U盘导入按钮 -->
+        <Button
+            android:id="@+id/btn_import_from_usb"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="60dp"
+            android:text="从U盘导入"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:background="#50FFFFFF"
+            android:onClick="onImportFromUsbClick" />
+
+    </LinearLayout>
+
+</RelativeLayout>
